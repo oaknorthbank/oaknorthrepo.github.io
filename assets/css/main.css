@@ -16,7 +16,12 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.columns{
+    flex: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 97px;
+}
 .spinCol{
   
   width: 25%;
