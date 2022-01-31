@@ -16,6 +16,19 @@
 <body data-new-gr-c-s-check-loaded="14.1047.0" data-gr-ext-installed="">
   <app-root></app-root>
   <script>
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+  <script>
     // window.onload = function () {
     //     window.location.href = window.location; // Your app's URL to open the app
     //     setTimeout(function () {
