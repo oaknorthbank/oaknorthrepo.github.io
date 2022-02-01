@@ -92,10 +92,9 @@ permalink: instantfunding
 
       <script>
         function loadApp() {
-          window.location.href = window.location;
-          setTimeout(function(){
-            window.close();
-          },2000);
+          let winLoc = window.location;
+          window.close();
+          window.location.href = winLoc;
         }
       </script>
     </div>
