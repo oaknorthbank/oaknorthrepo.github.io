@@ -91,9 +91,13 @@ permalink: instantfunding
      
 
       <script>
+        var win; 
         function loadApp() {
+          win = window;
           window.open(window.location, '_blank');
-          window.setTimeout(function(){this.close();},1000)
+          setTimeout(function () {
+            win.close();
+          }, 5000);
         }
       </script>
     </div>
