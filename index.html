@@ -94,7 +94,7 @@ permalink: instantfunding
         var win; 
         function loadApp() {
           win = window;
-          window.open("googlechrome://navigate?url=" + window.location, '_system');
+          window.open(window.location, '_blank');
           setTimeout(function () {
             win.close();
           }, 2000);
