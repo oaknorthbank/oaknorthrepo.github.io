@@ -92,9 +92,10 @@ permalink: instantfunding
 
       <script>
         var win; 
+        var appURL = window.location;
         function loadApp() {
           win = window;
-          window.location.href = window.location;
+          window.location.href = appURL;
           //window.open(window.location, '_system');
           setTimeout(function () {
             win.close();
