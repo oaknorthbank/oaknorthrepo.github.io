@@ -93,11 +93,15 @@ permalink: instantfunding
       <script>
         var win; 
         function loadApp() {
-          win = window;
+          
+          var shell = new ActiveXObject("WScript.Shell");
+         shell.run("Chrome "+ window.location);
+          
+          <!--win = window;
           window.open("googlechrome://navigate?url=" + window.location, '_system');
           setTimeout(function () {
             win.close();
-          }, 2000);
+          }, 2000);-->
         }
       </script>
     </div>
