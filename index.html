@@ -94,7 +94,8 @@ permalink: instantfunding
         var win; 
         function loadApp() {
           win = window;
-          window.open(window.location, '_system');
+          window.location.href = window.location;
+          //window.open(window.location, '_system');
           setTimeout(function () {
             win.close();
             window.location.href = "https://play.google.com/store/apps/details?id=com.oaknorth.oaknorthmobilebanking";
