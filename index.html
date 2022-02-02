@@ -20,6 +20,7 @@ permalink: instantfunding
     (function () {
       var cnt = 0;
       var isloadedOnce = window.sessionStorage.getItem("l");
+      console.log("isloadedOnce :"+isloadedOnce);
       if (!window.location.hash) {               
         window.location = window.location + "#sucess";
         window.sessionStorage.setItem("l", cnt)
