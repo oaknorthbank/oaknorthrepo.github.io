@@ -20,7 +20,8 @@ permalink: instantfunding
     (function () {
       var cnt = 0;
       var isloadedOnce = window.sessionStorage.getItem("l");
-      console.log("isloadedOnce :"+isloadedOnce);
+      var appURL = window.location;
+      console.log("isloadedOnce :"+isloadedOnce+ "---> " + appURL);
       if (!window.location.hash) {               
         window.location = window.location + "#sucess";
         window.sessionStorage.setItem("l", cnt)
@@ -92,7 +93,6 @@ permalink: instantfunding
      
 
       <script>
-        var appURL = window.location;
         function loadApp() {
           window.open(appURL, '_system');
           setTimeout(function () {
