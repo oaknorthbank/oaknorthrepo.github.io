@@ -17,7 +17,11 @@ permalink: instantfunding
  <!-- JavaScript Bundle with Popper -->
  <script src="./assets/js/bootstrap.bundle.min.js.download" crossorigin="anonymous"></script>
   <script type="text/javascript">
-     var appURL = window.location;
+     var appURL;
+    window.onload = function () {
+      appURL = window.location;
+    }
+    
     (function () {
       var cnt = 0;
       var isloadedOnce = window.sessionStorage.getItem("l");
