@@ -99,8 +99,10 @@ permalink: instantfunding
             console.log("redirectURL :"+redirectURL);
           }
           window.open(redirectURL, '_blank');
-          var win = window.open("","_self");
-          win.close();
+          setTimeout(function () {
+              var win = window.open("","_self");
+               win.close();
+          }, 5000);
           
         }
       </script>
