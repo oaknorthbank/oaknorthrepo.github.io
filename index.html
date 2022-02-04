@@ -92,8 +92,8 @@ permalink: instantfunding
 
       <script>
         function loadApp() {
-          var redirectURL = window.location;
-          const ua = navigator.userAgent
+          let redirectURL = window.location;
+          const ua = navigator.userAgent;
           if (/android/i.test(ua)) {
             redirectURL = "onbmobileapp://instantfunding"+window.location.search;
             console.log("redirectURL :"+redirectURL);
