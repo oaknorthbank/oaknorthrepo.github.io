@@ -94,13 +94,13 @@ permalink: instantfunding
         const ua = navigator.userAgent;
         function loadApp() {
           let redirectURL = window.location;
-//           if (/android/i.test(ua)) {
-//             redirectURL = "onbmobileapp://instantfunding"+window.location.search;
-//             console.log("redirectURL :"+redirectURL);
-//           }
+          if (/android/i.test(ua)) {
+            redirectURL = "onbmobileapp://instantfunding"+window.location.search;
+            console.log("redirectURL :"+redirectURL);
+          }
           window.open(redirectURL, '_blank');
         }
-      </scri}pt>
+      </script>
     </div>
   </div>
 </body></html>
