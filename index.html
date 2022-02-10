@@ -21,19 +21,15 @@ permalink: instantfunding
  <!-- JavaScript Bundle with Popper -->
  <script src="./assets/js/bootstrap.bundle.min.js.download" crossorigin="anonymous"></script>
   <script type="text/javascript">
-//     (function () {
-//       var cnt = 0;
+    (function () {
+      var cnt = 0;
 //       var isloadedOnce = window.sessionStorage.getItem("l");
 //       if (!window.location.hash) {               
 //         window.location = window.location;
 //         window.sessionStorage.setItem("l", cnt)
 //         window.location.reload();
 //       }
-//     })();
-     window.history.forward();
-     function noBack() {
-            window.history.forward();
-     }
+    })();
   </script>
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -100,26 +96,17 @@ permalink: instantfunding
 
       <script>
         const ua = navigator.userAgent;
-        if(sessionStorage.getItem("buttonClickedCount")==null){
-        
-          sessionStorage.setItem("buttonClickedCount", 0);
-        }
         function loadApp() {
-          let count = sessionStorage.getItem("buttonClickedCount");
-          sessionStorage.setItem("buttonClickedCount", parseInt(count)+1);
-          console.log("buttonClickedCount 4: "+sessionStorage.getItem("buttonClickedCount"));
-          if(sessionStorage.getItem("buttonClickedCount")<=1){
-            let redirectURL = window.location;
-            if (/android/i.test(ua)) {
-              redirectURL = "onbmobileapp://instantfunding"+window.location.search;
-              console.log("redirectURL :"+redirectURL);
-            }
-            window.open(redirectURL, '_blank');
-            window.setTimeout(function () {
-                // window.location.replace('about:blank');
-                window.location.href = './blank.html';
-            }, 2000);
-          } 
+          let redirectURL = window.location;
+          if (/android/i.test(ua)) {
+            redirectURL = "onbmobileapp://instantfunding"+window.location.search;
+            console.log("redirectURL :"+redirectURL);
+          }
+          window.open(redirectURL, '_blank');
+          window.setTimeout(function () {
+             window.location.replace('about:blank');
+             //window.location.href = 'about:blank';
+          }, 2000);
         }
       </script>
     </div>
