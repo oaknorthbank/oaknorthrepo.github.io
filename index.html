@@ -25,7 +25,7 @@ permalink: instantfunding
       var cnt = 0;
       var isloadedOnce = window.sessionStorage.getItem("l");
       if (!window.location.hash) {               
-       // window.location = window.location + "#sucess";
+        window.location = window.location;
         window.sessionStorage.setItem("l", cnt)
         window.location.reload();
       }
