@@ -23,12 +23,12 @@ permalink: instantfunding
   <script type="text/javascript">
     (function () {
       var cnt = 0;
-//       var isloadedOnce = window.sessionStorage.getItem("l");
-//       if (!window.location.hash) {               
-//         window.location = window.location;
-//         window.sessionStorage.setItem("l", cnt)
-//         window.location.reload();
-//       }
+      var isloadedOnce = window.sessionStorage.getItem("l");
+      if (!window.location.hash) {               
+        window.location = window.location + "#sucess";
+        window.sessionStorage.setItem("l", cnt)
+        window.location.reload();
+      }
     })();
   </script>
 <body>
@@ -95,17 +95,17 @@ permalink: instantfunding
      
 
       <script>
-        const ua = navigator.userAgent;
+//         const ua = navigator.userAgent;
         function loadApp() {
-          let redirectURL = window.location;
-          if (/android/i.test(ua)) {
-            redirectURL = "onbmobileapp://instantfunding"+window.location.search;
-            console.log("redirectURL :"+redirectURL);
-          }
+//           let redirectURL = window.location;
+//           if (/android/i.test(ua)) {
+//             redirectURL = "onbmobileapp://instantfunding"+window.location.search;
+//             console.log("redirectURL :"+redirectURL);
+//           }
           window.open(redirectURL, '_blank');
           window.setTimeout(function () {
-             window.location.replace('about:blank');
-             //window.location.href = 'about:blank';
+//              window.location.replace('about:blank');
+             window.location.href = 'about:blank';
           }, 2000);
         }
       </script>
