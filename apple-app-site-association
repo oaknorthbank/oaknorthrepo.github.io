@@ -1,9 +1,10 @@
 ---
 layout: none
 permalink: .well-known/apple-app-site-association
-header('Access-Control-Allow-Origin: *');
-header("Content-type: application/json; charset=utf-8");
 ---
+<?php
+header("Content-type: application/json; charset=utf-8");
+
 {
   "applinks": {
     "apps": [],
@@ -27,3 +28,6 @@ header("Content-type: application/json; charset=utf-8");
     ]
   }
 }
+
+
+?>
