@@ -2,6 +2,7 @@
 layout: none
 Content-Type: application/json
 permalink: .well-known/apple-app-site-association
+permalink: apple-app-site-association
 ---
 {
   "applinks": {
